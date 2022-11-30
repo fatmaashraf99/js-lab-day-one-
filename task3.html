@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+</head>
+<script>
+// program to solve quadratic equation
+let root1, root2;
+
+// take input from the user
+let a = prompt("Enter the first number: ");
+let b = prompt("Enter the second number: ");
+let c = prompt("Enter the third number: ");
+
+// calculate discriminant
+let discriminant = b * b - 4 * a * c;
+
+// condition for real and different roots
+if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+    // result
+    document.write(`The roots of quadratic equation are ${root1} and ${root2}`);
+}
+
+// condition for real and equal roots
+else if (discriminant == 0) {
+    root1 = root2 = -b / (2 * a);
+
+    // result
+    document.write(`The roots of quadratic equation are ${root1} and ${root2}`);
+}
+
+// if roots are not real
+else {
+    let realPart = (-b / (2 * a)).toFixed(2);
+    let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+    // result
+    document.write(
+    `The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+  );
+ 
+}
+</script>
+
+<body>
+    <nav class="navbar">
+        <a href="task1.html">task 1</a>
+        <a href="task2.html">task 2</a>
+        <a href="task3.html">task 3</a>
+        <a href="task4.html">task 4</a>
+        <a href="task5.html">task 5</a>
+
+
+    </nav>
+
+</body>
+<style>
+    body{
+        background-color: rgb(196, 191, 191);
+        margin: 100px;
+        font-weight: bold;
+    }
+    .navbar{
+        margin-left: 50%;
+       
+    }
+    .navbar a:link{
+        text-decoration: none;
+        
+    }
+    .navbar a{
+        color: blue;
+        padding-right: 30px;
+    }
+</style>
+
+</html>
